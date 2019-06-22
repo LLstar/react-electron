@@ -1,0 +1,83 @@
+{
+  "name": "react-electron-project",
+  "version": "0.1.0",
+  "author": "LLstar",
+  "description": "star音乐，桌面应用",
+  "private": true,
+  "main": "./public/electron.js",
+  "homepage": ".",
+  "build": {
+    "productName": "star音乐",
+    "copyright": "Copyright © LLstar",
+    "appId": "music",
+    "compression": "maximum",
+    "asar": false,
+    "directories": {
+      "output": "build"
+    },
+    "files": [
+      "dist/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "./public/favicon.ico"
+    },
+    "nsis": {
+      "allowToChangeInstallationDirectory": true,
+      "oneClick": false,
+      "menuCategory": true,
+      "allowElevation": false
+    }
+  },
+  "scripts": {
+    "start": "cross-env PORT=3002 react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
+    "eject": "react-app-rewired eject",
+    "electron-start": "cross-env NODE_ENV=development electron .",
+    "electron-dev": "concurrently \"cross-env BROWSER=none yarn start\" \"wait-on http://localhost:3002 && cross-env NODE_ENV=development electron . \"",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder --win --ia32 --publish always"
+  },
+  "dependencies": {
+    "antd": "^3.19.5",
+    "axios": "^0.19.0",
+    "babel-plugin-import": "^1.12.0",
+    "customize-cra": "^0.2.13",
+    "global": "^4.4.0",
+    "less": "^3.9.0",
+    "less-loader": "^5.0.0",
+    "react": "^16.8.6",
+    "react-css-modules": "^4.7.11",
+    "react-dom": "^16.8.6",
+    "react-router-dom": "^5.0.1",
+    "react-scripts": "^3.0.1",
+    "typescript": "^3.5.2"
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "cross-env": "^5.2.0",
+    "electron": "^5.0.4",
+    "electron-builder": "^20.43.0",
+    "node-sass": "^4.12.0",
+    "react-app-rewired": "^2.1.3",
+    "sass-loader": "^7.1.0",
+    "wait-on": "^3.2.0"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
