@@ -2,7 +2,7 @@ import React from 'react'
 import './home.less'
 import Head from '../../components/header/header'
 import SideBar from '../../components/sideBar/sidebar'
-import { Layout } from 'antd';
+import { Layout, BackTop } from 'antd';
 import { Route, Redirect } from 'react-router-dom'
 import About from '../about/about'
 import Recommend from '../recommend/recommend'
@@ -39,6 +39,9 @@ export default class Home extends React.Component {
             </Content>
           </Layout>
         </Layout>
+        <BackTop>
+          <div>TOP</div>
+        </BackTop>
       </div>
     )
   }

@@ -28,7 +28,7 @@ class BaseHttp {
     // 添加请求拦截器
     this.instance.interceptors.request.use(
       config => {
-        const BaseUrl = 'http://192.168.2.163:3000/'
+        const BaseUrl = 'http://localhost:3000/'
         config.baseURL = BaseUrl
         filterParam(config.params)
         if (config.method === 'get') {

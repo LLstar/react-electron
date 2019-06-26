@@ -17,11 +17,11 @@ class Head extends Component {
   render() {
     return (
       <div>
-        <Row>
+        <Row type="flex" justify="space-between">
           <Col span={8} className="headerTitle">
             LLstar Music
           </Col>
-          <Col span={12} offset={4}>
+          <Col span={14}>
             <NavLink className="nav" to="/recommend">推荐</NavLink>
             <NavLink className="nav" to="/leaderboard">排行榜</NavLink>
             <NavLink className="nav" to="/search">搜索</NavLink>
