@@ -4,10 +4,10 @@ import Head from '../../components/header/header'
 import SideBar from '../../components/sideBar/sidebar'
 import { Layout, BackTop } from 'antd';
 import { Route, Redirect } from 'react-router-dom'
-import About from '../about/about'
+import SongList from '../songList/songList'
 import Recommend from '../recommend/recommend'
-import Collection from '../collection/collection'
-import Search from '../search/search'
+import Radio from '../radio/radio'
+import Singer from '../singer/singer'
 import Leaderboard from '../leaderboard/leaderboard'
 
 const { Header, Sider, Content } = Layout;
@@ -31,10 +31,10 @@ export default class Home extends React.Component {
             </Header>
             <Content className="content">
               <Redirect path="/" to={{pathname: '/recommend'}} />
-              <Route path='/about' component = { About } />
+              <Route path='/songList' component = { SongList } />
               <Route path='/recommend' component = { Recommend } />
-              <Route path='/collection' component= { Collection } />
-              <Route path='/search' component= { Search } />
+              <Route path='/radio' component= { Radio } />
+              <Route path='/singer' component= { Singer } />
               <Route path='/leaderboard' component= { Leaderboard } />
             </Content>
           </Layout>

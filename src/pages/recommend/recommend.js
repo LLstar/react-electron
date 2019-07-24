@@ -13,10 +13,10 @@ class Recommend extends React.Component {
 
 const styles = {
   recommend: {
-    padding: '50px'
+    padding: '20px 50px'
   },
   banner: {
-    width: '100vw',
+    width: '80vw',
     height: '150px'
   }
 }

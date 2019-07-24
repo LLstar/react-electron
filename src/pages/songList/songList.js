@@ -1,13 +1,13 @@
 import React from 'react'
 
-class About extends React.Component {
+class SongList extends React.Component {
   render() {
     return (
       <div>
-        <h2>关于</h2>
+        <h2>歌单</h2>
       </div>
     )
   }
 }
 
-export default About
+export default SongList

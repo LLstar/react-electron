@@ -1,13 +1,13 @@
 import React from 'react'
 
-class Search extends React.Component {
+class Radio extends React.Component {
   render() {
     return (
       <div>
-        <h2>搜索</h2>
+        <h2>电台</h2>
       </div>
     )
   }
 }
 
-export default Search
+export default Radio

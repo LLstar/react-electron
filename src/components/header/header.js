@@ -4,16 +4,6 @@ import { Row, Col } from 'antd'
 import './header.less'
 
 class Head extends Component {
-  state = {
-    current: 'mail'
-  }
-
-  handleClick = (e) => {
-    this.setState({
-      current: e.key
-    })
-  }
-
   render() {
     return (
       <div>
@@ -23,10 +13,10 @@ class Head extends Component {
           </Col>
           <Col span={14}>
             <NavLink className="nav" to="/recommend">推荐</NavLink>
-            <NavLink className="nav" to="/leaderboard">排行榜</NavLink>
-            <NavLink className="nav" to="/search">搜索</NavLink>
-            <NavLink className="nav" to="/collection">收藏</NavLink>
-            <NavLink className="nav" to="/about">关于</NavLink>
+            <NavLink className="nav" to="/singer">歌手</NavLink>
+            <NavLink className="nav" to="/leaderboard">排行</NavLink>
+            <NavLink className="nav" to="/radio">电台</NavLink>
+            <NavLink className="nav" to="/songList">歌单</NavLink>
           </Col>
         </Row>
       </div>
