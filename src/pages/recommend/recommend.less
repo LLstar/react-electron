@@ -1,0 +1,65 @@
+@import '../../style/variable.less';
+
+.recommend {
+  padding: 20px 50px;
+  background: @content;
+}
+.banner {
+  width: 100vw;
+  height: 100px;
+  text-align: center;
+}
+.label {
+  color: white;
+  margin: 20px 0;
+}
+.recommend-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  li {
+    position: relative;
+    display: inline-block;
+    width: 20%;
+    height: 200px;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+  .list-img-container {
+    text-align: center;
+    position: relative;
+    img {
+      width: 130px;
+      height: 130px;
+      border-radius: 5px;
+      vertical-align: center;
+      margin-bottom: 10px;
+    }
+    .list-play-count {
+      font-size: 13px;
+      position: absolute;
+      z-index: 999;
+      left: 10px;
+      bottom: 15px;
+      i {
+        font-style: normal;
+        margin-left: 6px;
+      }
+    }
+    .icon-bofang {
+      font-style: normal;
+      font-size: 28px;
+      position: absolute;
+      right: 15px;
+      bottom: 10px;
+    }
+    .icon-bofang:hover {
+      color: @playColor;
+    }
+  }
+  .list-name {
+    font-size: 14px;
+    padding: 0 10px;
+    text-align: center;
+  }
+}

@@ -9,8 +9,8 @@ const winURL = process.env.NODE_ENV === 'development' ? 'http://localhost:3002' 
 function createWindow () {
   // Create the browser window.
   mainWindow = new BrowserWindow({
-    width: 1200,
-    height: 600,
+    minWidth: 1100,
+    minHeight: 600,
   })
 
   // and load the index.html of the app.

@@ -1,11 +1,18 @@
 import SSHttp from './SSHttp'
 
 // 获取轮播图
-const BANNER = async (params) => {
-  const result = await SSHttp.get('banner', { type: 0, ...params })
+const BANNER = async () => {
+  const result = await SSHttp.get('banner', { type: 0})
+  return result
+}
+
+// 获取推荐歌单列表
+const PERSONALIZED = async () => {
+  const result = await SSHttp.get('personalized')
   return result
 }
 
 export {
-  BANNER
+  BANNER,
+  PERSONALIZED
 }
