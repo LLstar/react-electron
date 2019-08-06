@@ -2,7 +2,6 @@ import React from 'react'
 import Banner from '../../components/banner/banner'
 import { PERSONALIZED } from '../../axios/Api'
 import './recommend.less'
-import { Icon } from 'antd'
 
 class Recommend extends React.Component {
   constructor() {
@@ -17,9 +16,6 @@ class Recommend extends React.Component {
   }
 
   clickHandle() {
-    console.log('====================================');
-    console.log('点击');
-    console.log('====================================');
   }
 
   playCount = (count) => {
@@ -36,7 +32,7 @@ class Recommend extends React.Component {
               <i>{this.playCount(item.playCount)}</i>
             </span>
             <i className="iconfont icon-bofang" onClick={this.clickHandle}></i>
-            <img src={item.picUrl} alt="" title={item.name} />
+            <img src={item.picUrl} alt="" />
           </div>
           <p className="list-name">{item.name}</p>
         </li>
