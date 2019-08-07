@@ -27,12 +27,14 @@ class Recommend extends React.Component {
       return (
         <li key={item.id}>
           <div className="list-img-container">
-            <span className="list-play-count">
-              <i className="iconfont icon-erji" />
-              <i>{this.playCount(item.playCount)}</i>
-            </span>
-            <i className="iconfont icon-bofang" onClick={this.clickHandle}></i>
-            <img src={item.picUrl} alt="" />
+            <div className="img-item">
+              <span className="list-play-count">
+                <i className="iconfont icon-erji" />
+                <i>{this.playCount(item.playCount)}</i>
+              </span>
+              <i className="iconfont icon-bofang" onClick={this.clickHandle}></i>
+              <img src={item.picUrl} alt="" />
+            </div>
           </div>
           <p className="list-name">{item.name}</p>
         </li>
