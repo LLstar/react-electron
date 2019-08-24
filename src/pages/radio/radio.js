@@ -5,7 +5,7 @@ import './radio.less'
 class Radio extends React.Component {
   constructor() {
     super()
-    this.state = { list: [], radioCateList: [] }
+    this.state = { list: [], radioCateList: [], currentRadio: '' }
   }
 
   async componentDidMount() {
@@ -42,7 +42,7 @@ class Radio extends React.Component {
   cateList = () => {
     return this.state.radioCateList.map(item => {
       return (
-        <span className="cate-item" onClick={this.changeCate.bind(this, item)} key={item.id}>{item.name}</span>
+        <span className={this.state.currentRadio === item.id ? 'cate-item active' : 'cate-item'} onClick={this.changeCate.bind(this, item)} key={item.id}>{item.name}</span>
       )
     })
   }
@@ -50,7 +50,7 @@ class Radio extends React.Component {
   // 切换分类
   async changeCate(item) {
     const result = await DJ_RECOMMEND_TYPE(item.id)
-    this.setState({ list: result.djRadios })
+    this.setState({ list: result.djRadios, currentRadio: item.id })
   }
 
   render() {
