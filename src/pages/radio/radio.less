@@ -1,0 +1,66 @@
+@import '../../style/variable.less';
+.cate-list {
+  padding: 10px;
+  .cate-item {
+    font-size: 14px;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    background: #2F3E60;
+    display: inline-block;
+    text-align: center;
+    margin: 10px;
+    cursor: pointer;
+  }
+}
+.radio-list {
+  list-style: none;
+  margin-top: 10px;
+  li {
+    width: 25%;
+    display: inline-block;
+    margin: 10px 0;
+  }
+  &-item {
+    width: 150px;
+    height: 170px;
+    margin: auto;
+    position: relative;
+    &-count {
+      position: absolute;
+      bottom: 5px;
+      left: 8px;
+      display: flex;
+      justify-content: flex-start;
+      i {
+        font-style: normal;
+        margin-right: 10px;
+        font-size: 16px;
+      }
+    }
+    .icon-bofang {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      font-size: 40px;
+      color: @playColor;
+      margin-top: -20px;
+      margin-left: -20px;
+      display: none;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &-item:hover {
+    .icon-bofang {
+      display: block;
+    }
+  }
+  &-name {
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+  }
+}

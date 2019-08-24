@@ -7,7 +7,6 @@ class Recommend extends React.Component {
   constructor() {
     super();
     this.state = { recommandList: [] }
-    this.clickHandle = this.clickHandle.bind(this)
   }
 
   async componentDidMount() {
@@ -15,7 +14,10 @@ class Recommend extends React.Component {
     this.setState({ recommandList: result.result })
   }
 
-  clickHandle() {
+  clickHandle(data) {
+    console.log('====================================');
+    console.log('当前播放的数据：', data);
+    console.log('====================================');
   }
 
   playCount = (count) => {
@@ -32,7 +34,7 @@ class Recommend extends React.Component {
                 <i className="iconfont icon-erji" />
                 <i>{this.playCount(item.playCount)}</i>
               </span>
-              <i className="iconfont icon-bofang" onClick={this.clickHandle}></i>
+              <i className="iconfont icon-bofang" onClick={this.clickHandle.bind(this, item)}></i>
               <img src={item.picUrl} alt="" />
             </div>
           </div>
